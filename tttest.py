@@ -1,3 +1,12 @@
+import tensorflow as tf
+import librosa
+import numpy as np
+import sounddevice as sd
+import soundfile as sf
+import os
+import ui
+from time import sleep
+
 # Загрузка модели TFLite
 interpreter = tf.lite.Interpreter(model_path="drone_detector.tflite")
 interpreter.allocate_tensors()
